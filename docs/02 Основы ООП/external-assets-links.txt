@@ -1,0 +1,24 @@
+
+011 unset
+https://www.php.net/manual/ru/function.unset
+
+013 pow
+https://www.php.net/manual/ru/function.pow
+
+013 sqrt
+https://www.php.net/manual/ru/function.sqrt
+
+014 define
+https://www.php.net/manual/ru/function.define
+
+014 defined
+https://www.php.net/manual/ru/function.defined
+
+014 constant
+https://www.php.net/manual/ru/function.constant
+
+014 -
+https://www.php.net/manual/ru/language.constants.predefined.php
+
+015 require-once
+https://www.php.net/manual/ru/function.require-once.php

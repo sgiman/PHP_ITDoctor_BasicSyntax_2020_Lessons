@@ -1,0 +1,3 @@
+
+040 usort
+https://www.php.net/manual/ru/function.usort

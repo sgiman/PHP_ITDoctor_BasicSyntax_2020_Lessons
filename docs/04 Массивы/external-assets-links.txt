@@ -1,0 +1,24 @@
+
+028 print-r
+https://www.php.net/manual/ru/function.print-r
+
+032 list
+https://www.php.net/manual/ru/function.list
+
+035 array-key-exists
+https://www.php.net/manual/ru/function.array-key-exists
+
+035 array-search
+https://www.php.net/manual/ru/function.array-search
+
+036 rand
+https://www.php.net/manual/ru/function.rand
+
+036 count
+https://www.php.net/manual/ru/function.count
+
+036 sort
+https://www.php.net/manual/ru/function.sort
+
+036 file
+https://www.php.net/manual/ru/function.file

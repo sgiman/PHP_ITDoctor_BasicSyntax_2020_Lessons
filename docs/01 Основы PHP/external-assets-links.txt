@@ -1,0 +1,45 @@
+
+001 -
+https://youtu.be/lGRU2TpcDMQ
+
+002 -JS
+https://youtu.be/2yT8jMgWvko
+
+002 date
+https://www.php.net/manual/ru/function.date.php
+
+002 mt-rand
+https://www.php.net/manual/ru/function.mt-rand
+
+004 require
+https://www.php.net/manual/ru/function.require.php
+
+004 include
+https://www.php.net/manual/ru/function.include.php
+
+008 isset
+https://www.php.net/manual/ru/function.isset
+
+008 empty
+https://www.php.net/manual/ru/function.empty
+
+008 gettype
+https://www.php.net/manual/ru/function.gettype
+
+008 is-int
+https://www.php.net/manual/ru/function.is-int
+
+010 is-numeric
+https://www.php.net/manual/ru/function.is-numeric
+
+010 round
+https://www.php.net/manual/ru/function.round
+
+010 floor
+https://www.php.net/manual/ru/function.floor
+
+010 ceil
+https://www.php.net/manual/ru/function.ceil
+
+010 decbin
+https://www.php.net/manual/ru/function.decbin

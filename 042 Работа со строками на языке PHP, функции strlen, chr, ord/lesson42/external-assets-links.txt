@@ -1,0 +1,48 @@
+
+042 strlen
+https://www.php.net/manual/ru/function.strlen
+
+042 mb-strlen
+https://www.php.net/manual/ru/function.mb-strlen
+
+042 chr
+https://www.php.net/manual/ru/function.chr
+
+042 ord
+https://www.php.net/manual/ru/function.ord
+
+043 substr
+https://www.php.net/manual/ru/function.substr
+
+043 strpos
+https://www.php.net/manual/ru/function.strpos
+
+043 str-replace
+https://www.php.net/manual/ru/function.str-replace
+
+043 trim
+https://www.php.net/manual/ru/function.trim
+
+044 htmlspecialchars
+https://www.php.net/manual/ru/function.htmlspecialchars
+
+044 strip-tags
+https://www.php.net/manual/ru/function.strip-tags
+
+044 nl2br
+https://www.php.net/manual/ru/function.nl2br
+
+045 -
+https://www.php.net/manual/ru/function.printf.php
+
+045 explode
+https://www.php.net/manual/ru/function.explode
+
+045 implode
+https://www.php.net/manual/ru/function.implode
+
+046 json-encode
+https://www.php.net/manual/ru/function.json-encode
+
+046 json-decode
+https://www.php.net/manual/ru/function.json-decode

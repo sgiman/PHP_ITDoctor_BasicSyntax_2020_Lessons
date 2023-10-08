@@ -1,0 +1,21 @@
+
+047 urlencode
+https://www.php.net/manual/ru/function.urlencode
+
+047 urldecode
+https://www.php.net/manual/ru/function.urldecode
+
+047 parse-url
+https://www.php.net/manual/ru/function.parse-url
+
+050 move-uploaded-file
+https://www.php.net/manual/ru/function.move-uploaded-file
+
+051 header
+https://www.php.net/manual/ru/function.header
+
+051 phpversion
+https://www.php.net/manual/ru/function.phpversion
+
+051 mail
+https://www.php.net/manual/ru/function.mail

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title>PHP</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Calibri', sans-serif;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 25px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 25px;
+    }
+
+    td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    a {
+      display: block;
+    }
+
+    body {
+      margin: 0;
+      background-image: url(img/bg.png);
+    }
+
+    .code {
+      width: 70px;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 10px;
+      background-color: rgb(47, 167, 236);
+      color: white;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Основы программирования на PHP</h1>
+
+    <img src="img/poster.png">
+
+    <h3>Оглавление</h3>
+    <ol>
+      <li><a href="#lesson1">Первый скрипт Hello World на PHP</a></li>
+      <li><a href="#lesson2">Конец строки</a></li>
+      <li><a href="#lesson3">Комментарии</a></li>
+      <li><a href="#lesson4">Подключение файла</a></li>
+      <li><a href="#lesson5">Переменные и типы данных</a></li>
+      <li><a href="#lesson6">Целые и вещественные числа</a></li>
+      <li><a href="#lesson7">Логический и строковый тип данных</a></li>
+      <li><a href="#lesson8">Базовые функции языка</a></li>
+      <li><a href="#lesson9">Явное и неявное приведение типов</a></li>
+      <li><a href="#lesson10">Округление чисел</a></li>
+      <li><a href="#lesson11">ООП: Классы и объекты</a></li>
+      <li><a href="#lesson12">Области видимости переменных класса</a></li>
+      <li><a href="#lesson13">Расстояние между двумя точками</a></li>
+      <li><a href="#lesson14">Константы</a></li>
+      <li><a href="#lesson15">Путь к файлу, константы класса</a></li>
+      <li><a href="#lesson16">Конкатенация строк</a></li>
+      <li><a href="#lesson17">Арифметические операторы</a></li>
+      <li><a href="#lesson18">Поразрядные операторы</a></li>
+      <li><a href="#lesson19">Операторы сравнения</a></li>
+      <li><a href="#lesson20">Условный оператор if</a></li>
+      <li><a href="#lesson21">Логические операторы</a></li>
+      <li><a href="#lesson22">Тернарный условный оператор, ??, goto</a></li>
+      <li><a href="#lesson23">Переключатель switch</a></li>
+      <li><a href="#lesson24">Чтение из файла и запись в файл</a></li>
+      <li><a href="#lesson25">Цикл while</a> </li>
+      <li><a href="#lesson26">Цикл do while</a></li>
+      <li><a href="#lesson27">Цикл for</a></li>
+      <li><a href="#lesson28">Массивы</a></li>
+      <li><a href="#lesson29">Ассоциативные массивы</a></li>
+      <li><a href="#lesson30">Многомерные массивы</a></li>
+      <li><a href="#lesson31">Интерполяция элементов массива в строки</a></li>
+      <li><a href="#lesson32">Конструкция list</a></li>
+      <li><a href="#lesson33">Обход массива циклом for и foreach</a></li>
+      <li><a href="#lesson34">Слияние и сравнение массивов</a></li>
+      <li><a href="#lesson35">Проверка существования и удаление элементов массива</a></li>
+      <li><a href="#lesson36">Задачи на понимание массивов</a></li>
+      <li><a href="#lesson37">Функции</a></li>
+      <li><a href="#lesson38">Параметры и аргументы функций</a></li>
+      <li><a href="#lesson39">Глобальные и статические переменные</a></li>
+      <li><a href="#lesson40">Рекурсия, вложенные и анонимные функции</a></li>
+      <li><a href="#lesson41">Замыкания и задачи на понимание функций</a></li>
+      <li><a href="#lesson42">Работа со строками</a></li>
+      <li><a href="#lesson43">Работа с подстроками</a></li>
+      <li><a href="#lesson44">Функции для работы с HTML</a></li>
+      <li><a href="#lesson45">Форматный вывод</a></li>
+      <li><a href="#lesson46">Работа с JSON</a></li>
+      <li><a href="#lesson47">Передача параметров методом GET</a></li>
+      <li><a href="#lesson48">Передача параметров методом POST</a></li>
+      <li><a href="#lesson49">Работа с элементами формы checkbox, radio, select</a></li>
+      <li><a href="#lesson50">Загрузка файлов на сервер</a></li>
+      <li><a href="#lesson51">Форма обратной связи, отправка письма на почту</a></li>
+      <li><a href="#lesson52">Методы класса</a></li>
+      <li><a href="#lesson53">Конструктор класса</a></li>
+      <li><a href="#lesson54">Наследование и перегрузка методов</a></li>
+      <li><a href="#lesson55">abstract и final классы и методы</a></li>
+      <li><a href="#materials">Полезные материалы</a></li>
+    </ol>
+
+    <h3 id="lesson1">1. Первый скрипт на PHP</h3>
+    <p>
+      Расширение файлов .php <br>
+      &lt;?php ?&gt; - php тег <br>
+      echo - для вывода на экран
+    </p>
+    <a href="lessons/lesson1/index.php" class="code">Код</a>
+
+    <h3 id="lesson2">2. Конец строки</h3>
+    <p>
+      Конец строки отделяется спомощью точки с запятой.<br>
+      &lt;?= "Текст"; ?&gt; сокращенный тег php <br>
+      тоже самое что и &lt;?php echo "Текст"; ?&gt;
+    </p>
+    <a target="_blank" href="https://www.php.net/manual/ru/function.date.php">date(DATE_RSS); - выводит дату </a>
+    <a target="_blank" href="https://www.php.net/manual/ru/function.mt-rand">mt_rand(0,1); - генерирует случайное число
+      от 0 до 1</a>
+    <a href="lessons/lesson2/index.php" class="code">Код</a>
+
+    <h3 id="lesson3">3. Комментарии</h3>
+    <p>
+      # Однострочный комментарий в стили Python<br>
+      // Однострочный комментарий (классический)<br>
+      /*<br>
+      Многострочный<br>
+      комментарий<br>
+      */<br>
+      Комментарии нужны только для программиста.<br>
+      В VS Code можно закоментировать выделенный код с помощью CTRL + /
+    </p>
+    <a href="lessons/lesson3/index.php" class="code">Код</a>
+
+    <h3 id="lesson4">4. Подключени файла</h3>
+    <a href="https://www.php.net/manual/ru/function.include.php" target="_blank">include 'каталог/файл.php';</a>
+    <a href="https://www.php.net/manual/ru/function.require.php" target="_blank">require 'каталог/файл.php';</a>
+    <a href="lessons/lesson4/index.php" class="code">Код</a>
+
+    <h3 id="lesson5">5. Переменные и типы данных</h3>
+    <p>
+      Переменная всегда начинается знаком доллара, например $var = 5;<br>
+      Названия переменных на php чувствительны к регистру.
+    </p>
+    <a href="lessons/lesson5/index.php" class="code">Код</a>
+
+    <h3 id="lesson6">6. Целые и вещественные числа</h3>
+    <p>
+      10 - DEC Число<br>
+      -10 - Отрицательное DEC число<br>
+      012 - OCT числа<br>
+      0x12A - HEX числа<br>
+      5.631 - Вещественное число<br>
+      5.0e-3 - 5.0*10^-3<br>
+      5.0e+3 - 5.0*10^+3
+    </p>
+    <a href="lessons/lesson6/index.php" class="code">Код</a>
+
+    <h3 id="lesson7">7. Логический и строковый тип данных</h3>
+    <p>
+      true и false - можно записывать в любом регистре<br>
+      Строки записываются в ковычках, например $str = "Строка";
+    </p>
+    <a href="lessons/lesson7/index.php" class="code">Код</a>
+
+    <h3 id="lesson8">8. Базовые функции языка</h3>
+    <a href="https://www.php.net/manual/ru/function.isset" target="_blank">isset() - Определяет, была ли установлена
+      переменная значением, отличным от null</a>
+    <a href="https://www.php.net/manual/ru/function.empty" target="_blank">empty() - Проверяет, пуста ли переменная</a>
+    <a href="https://www.php.net/manual/ru/function.gettype" target="_blank">gettype() - Возвращает тип переменной</a>
+    <a href="https://www.php.net/manual/ru/function.is-int" target="_blank">is_int() - Проверяет, является ли переменная
+      целым числом</a>
+    <a href="lessons/lesson8/index.php" class="code">Код</a>
+
+
+    <h3 id="lesson9">9. Явное и неявное приведение типов</h3>
+    <table>
+      <tr class="title">
+        <td>Значение</td>
+        <td>Описание</td>
+      </tr>
+      <tr>
+        <td>$var = (int) $var;</td>
+        <td>Приведение к целому типу int</td>
+      </tr>
+      <tr>
+        <td>$var = (integer) $var;</td>
+        <td>Приведение к целому типу int</td>
+      </tr>
+      <tr>
+        <td>$var = (bool) $var;</td>
+        <td>Приведение к логическому типу boolean</td>
+      </tr>
+      <tr>
+        <td>$var = (boolean) $var;</td>
+        <td>Приведение к логическому типу boolean</td>
+      </tr>
+      <tr>
+        <td>$var = (float) $var;</td>
+        <td>Приведение к вещественному типу double</td>
+      </tr>
+      <tr>
+        <td>$var = (double) $var;</td>
+        <td>Приведение к вещественному типу double</td>
+      </tr>
+      <tr>
+        <td>$var = (real) $var;</td>
+        <td>Приведение к вещественному типу double</td>
+      </tr>
+      <tr>
+        <td>$var = (string) $var;</td>
+        <td>Приведение к строковому типу string</td>
+      </tr>
+      <tr>
+        <td>$var = (array) $var;</td>
+        <td>Приведение к массиву</td>
+      </tr>
+      <tr>
+        <td>$var = (object) $var;</td>
+        <td>Приведение к объекту</td>
+      </tr>
+    </table>
+    <a href="lessons/lesson9/index.php" class="code">Код</a>
+
+
+    <h3 id="lesson10">10. Округление чисел</h3>
+    <a href="https://www.php.net/manual/ru/function.is-numeric" target="_blank">is_numeric() - Проверяет, является ли
+      переменная числом или строкой, содержащей число</a>
+    <a href="https://www.php.net/manual/ru/function.round" target="_blank">round() - Округляет число типа float</a>
+    <a href="https://www.php.net/manual/ru/function.floor" target="_blank">floor() - Округляет дробь в меньшую
+      сторону</a>
+    <a href="https://www.php.net/manual/ru/function.ceil" target="_blank">ceil() - Округляет дробь в большую сторону</a>
+    <a href="https://www.php.net/manual/ru/function.decbin" target="_blank">decbin() - Переводит число из десятичной
+      системы счисления в двоичную</a>
+    <a href="lessons/lesson10/index.php" class="code">Код</a>
+
+    <h3 id="lesson11">11. ООП: Классы и объекты</h3>
+    <a href="https://www.php.net/manual/ru/function.unset" target="_blank">unset() - Удаляет переменную</a>
+    <a href="lessons/lesson11/index.php" class="code">Код</a>
+
+    <h3 id="lesson12">12. Области видимости переменных класса</h3>
+    <p>
+      public - Переменная доступна везде<br>
+      private - Переменная доступна только в классе<br>
+      protected - Доступ имеется из класса, унаследованных классов и родительских<br>
+      static - Статическая переменная<br>
+    </p>
+    <img src="img/lesson12.png">
+    <a href="https://www.php.net/manual/ru/language.oop5.visibility.php" target="_blank">Области видимости</a>
+    <a href="lessons/lesson12/index.php" class="code">Код</a>
+
+    <h3 id="lesson13">13. Расстояние между двумя точками</h3>
+    <p>
+      clone $var; - Клонировать объект, а не указывать на него ссылку
+    </p>
+    <img src="img/lesson13.png">
+    <a href="https://www.php.net/manual/ru/function.pow" target="_blank">pow() - Возведение в степень</a>
+    <a href="https://www.php.net/manual/ru/function.sqrt" target="_blank">sqrt() - Квадратный корень</a>
+    <a href="lessons/lesson13/index.php" class="code">Код</a>
+
+    <h3 id="lesson14">14. Константы</h3>
+    <a href="https://www.php.net/manual/ru/function.define" target="_blank">define() - Определяет именованную
+      константу</a>
+    <a href="https://www.php.net/manual/ru/function.defined" target="_blank">defined() - Проверяет существование
+      указанной именованной константы</a>
+    <a href="https://www.php.net/manual/ru/function.constant" target="_blank">constant() - Возвращает значение
+      константы</a>
+    <a href="https://www.php.net/manual/ru/language.constants.predefined.php" target="_blank">Магические константы</a>
+    <a href="lessons/lesson14/index.php" class="code">Код</a>
+
+    <h3 id="lesson15">15. Путь к файлу, константы класса</h3>
+    <a href="https://www.php.net/manual/ru/function.require-once.php" target="_blank">require_once() - проверит,
+      включался ли уже данный файл, и если да, не будет включать его еще раз</a>
+    <a href="lessons/lesson15/index.php" class="code">Код</a>
+
+    <h3 id="lesson16">16. Конкатенация строк</h3>
+    <a href="https://www.php.net/manual/ru/function.echo" target="_blank">echo() - Выводит одну или более строк</a>
+    <a href="lessons/lesson16/index.php" class="code">Код</a>
+
+    <h3 id="lesson17">17. Арифметические операторы</h3>
+    <table>
+      <tr>
+        <td>+</td>
+        <td>Сложение</td>
+      </tr>
+      <tr>
+        <td>-</td>
+        <td>Вычитание</td>
+      </tr>
+      <tr>
+        <td>*</td>
+        <td>Умножение</td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td>Деление</td>
+      </tr>
+      <tr>
+        <td>**</td>
+        <td>Возведение в степень</td>
+      </tr>
+      <tr>
+        <td>%</td>
+        <td>Остаток от деления</td>
+      </tr>
+      <tr>
+        <td>++</td>
+        <td>Инкремент</td>
+      </tr>
+      <tr>
+        <td>--</td>
+        <td>Декремент</td>
+      </tr>
+    </table>
+    <a href="lessons/lesson17/index.php" class="code">Код</a>
+
+    <h3 id="lesson18">18. Поразрядные операторы</h3>
+    <img src="img/lesson18.jpg">
+    <a href="lessons/lesson18/index.php" class="code">Код</a>
+
+    <h3 id="lesson19">19. Операторы сравнения</h3>
+    <a href="https://www.php.net/manual/ru/language.operators.precedence.php" target="_blank">Приоритеты выполнениря операторов в PHP</a>
+    <a href="lessons/lesson19/index.php" class="code">Код</a>
+
+    <h3 id="lesson20">20. Условный оператор if</h3>
+    <pre>
+    if(условие) {
+      // действие
+    } elseif(условие) {
+      // действие
+    } else {
+      // действие
+    }
+  </pre>
+    <h4>Блок схемы для условных конструкций</h4>
+    <table>
+      <tr>
+        <td><img src="img/1.jpg"></td>
+        <td><img src="img/2.jpg"></td>
+      </tr>
+      <tr>
+        <td><img src="img/3.jpg"></td>
+        <td><img src="img/4.jpg"></td>
+      </tr>
+    </table>
+    <a href="lessons/lesson20/index.php" class="code">Код</a>
+
+    <h3 id="lesson21">21. Логические операторы</h3>
+    <img src="img/lesson21.jpg">
+    <a href="lessons/lesson21/index.php" class="code">Код</a>
+
+    <h3 id="lesson22">22. Тернарный условный оператор, ??, goto</h3>
+    <p>
+      выражени1 ? выражение2 : выражение3
+    </p>
+    <a href="lessons/lesson22/index.php" class="code">Код</a>
+
+    <h3 id="lesson23">23. Переключатель switch</h3>
+    <pre>
+    switch(проверка) {
+      case значение1:
+        выражение
+        ...
+        break;
+      case значениеN:
+        выражение
+        ...
+        break;
+      default:
+        выражение
+        ...
+      }
+  </pre>
+    <a href="lessons/lesson23/index.php" class="code">Код</a>
+
+    <h3 id="lesson24">24. Чтение из файла и запись в файл</h3>
+    <a href="https://www.php.net/manual/ru/function.file-get-contents.php" target="_blank">Чтение из файла</a>
+    <a href="https://www.php.net/manual/ru/function.file-put-contents" target="_blank">Запись в файл</a>
+    <a href="https://www.php.net/manual/ru/function.date" target="_blank">Дата</a>
+    <a href="lessons/lesson24/index.php" class="code">Код</a>
+
+    <h3 id="lesson25">25. Цикл while</h3>
+    <h4>Блок схема цикла while</h4>
+    <img src="img/5.jpg">
+    <a href="lessons/lesson25/index.php" class="code">Код</a>
+
+    <h3 id="lesson26">26. Цикл do while</h3>
+    <h4>Блок схема цикла do while</h4>
+    <img src="img/7.jpg">
+    <a href="lessons/lesson26/index.php" class="code">Код</a>
+
+    <h3 id="lesson27">27. Цикл for</h3>
+    <h4>Блок схема цикла for</h4>
+    <img src="img/6.jpg">
+    <a href="lessons/lesson27/index.php" class="code">Код</a>
+
+    <h3 id="lesson28">28. Массивы</h3>
+    <a href="https://www.php.net/manual/ru/function.print-r" target="_blank">print_r() - Выводит удобочитаемую
+      информацию о переменной</a>
+    <a href="lessons/lesson28/index.php" class="code">Код</a>
+
+    <h3 id="lesson29">29. Ассоциативные массивы</h3>
+    <a href="lessons/lesson29/index.php" class="code">Код</a>
+
+    <h3 id="lesson30">30. Многомерные массивы</h3>
+    <a href="lessons/lesson30/index.php" class="code">Код</a>
+
+    <h3 id="lesson31">31. Интерполяция элементов массива в строки</h3>
+    <a href="lessons/lesson31/index.php" class="code">Код</a>
+
+    <h3 id="lesson32">32. Конструкция list</h3>
+    <a href="https://www.php.net/manual/ru/function.list" target="_blank">list() - Присваивает переменным из списка
+      значения подобно массиву</a>
+    <a href="lessons/lesson32/index.php" class="code">Код</a>
+
+    <h3 id="lesson33">33. Обход массива циклом for и foreach</h3>
+    <a href="lessons/lesson33/index.php" class="code">Код</a>
+
+    <h3 id="lesson34">34. Слияние и сравнение массивов</h3>
+    <a href="https://www.php.net/manual/ru/function.array-merge" target="_blank">array_merge() - Сливает один или
+      большее количество массивов</a>
+    <a href="lessons/lesson34/index.php" class="code">Код</a>
+
+    <h3 id="lesson35">35. Проверка существования и удаление элементов массива</h3>
+    <a href="https://www.php.net/manual/ru/function.array-key-exists" target="_blank">array_key_exists() - Проверяет,
+      присутствует ли в массиве указанный ключ или индекс</a>
+    <a href="https://www.php.net/manual/ru/function.array-search" target="_blank">array_search() - Осуществляет поиск
+      данного значения в массиве и возвращает ключ первого найденного элемента в случае удачи</a>
+    <a href="lessons/lesson35/index.php" class="code">Код</a>
+
+    <h3 id="lesson36">36. Задачи на понимание массивов</h3>
+    <a href="https://www.php.net/manual/ru/function.rand" target="_blank">rand() - Генерирует случайное число</a>
+    <a href="https://www.php.net/manual/ru/function.count" target="_blank">count() - Подсчитывает количество элементов
+      массива или чего-либо в объекте</a>
+    <a href="https://www.php.net/manual/ru/function.sort" target="_blank">sort() - Сортирует массив</a>
+    <a href="https://www.php.net/manual/ru/function.file" target="_blank">file() - Читает содержимое файла и помещает
+      его в массив</a>
+    <a href="lessons/lesson36/index.php" class="code">Код</a>
+
+    <h3 id="lesson37">37. Функции</h3>
+    <a href="lessons/lesson37/index.php" class="code">Код</a>
+
+    <h3 id="lesson38">38. Параметры и аргументы функций</h3>
+    <a href="lessons/lesson38/index.php" class="code">Код</a>
+
+    <h3 id="lesson39">39. Глобальные и статические переменные</h3>
+    <a href="lessons/lesson39/index.php" class="code">Код</a>
+
+    <h3 id="lesson40">40. Рекурсия, вложенные и анонимные функции</h3>
+    <a href="https://www.php.net/manual/ru/function.usort" target="_blank">usort() - Сортирует массив по значениям
+      используя пользовательскую функцию для сравнения элементов</a>
+    <a href="lessons/lesson40/index.php" class="code">Код</a>
+
+    <h3 id="lesson41">41. Замыкания и задачи на понимание функций</h3>
+    <a href="lessons/lesson41/index.php" class="code">Код</a>
+
+    <h3 id="lesson42">42. Работа со строками</h3>
+    <a href="https://www.php.net/manual/ru/function.strlen" target="_blank">strlen() - Возвращает длину строки</a>
+    <a href="https://www.php.net/manual/ru/function.mb-strlen" target="_blank">mb_strlen() - Получает длину строки</a>
+    <a href="https://www.php.net/manual/ru/function.chr" target="_blank">chr() - Генерирует односимвольную строку по
+      заданному числу</a>
+    <a href="https://www.php.net/manual/ru/function.ord" target="_blank">ord() - Конвертирует первый байт строки в число
+      от 0 до 255</a>
+    <a href="lessons/lesson42/index.php" class="code">Код</a>
+
+    <h3 id="lesson43">43. Работа с подстроками</h3>
+    <a href="https://www.php.net/manual/ru/function.substr" target="_blank">substr() - Возвращает подстроку</a>
+    <a href="https://www.php.net/manual/ru/function.strpos" target="_blank">strpos() - Возвращает позицию первого
+      вхождения подстроки</a>
+    <a href="https://www.php.net/manual/ru/function.str-replace" target="_blank">str_replace() - Заменяет все вхождения
+      строки поиска на строку замены</a>
+    <a href="https://www.php.net/manual/ru/function.trim" target="_blank">trim() - Удаляет пробелы (или другие символы)
+      из начала и конца строки</a>
+    <a href="lessons/lesson43/index.php" class="code">Код</a>
+
+    <h3 id="lesson44">44. Функции для работы с HTML</h3>
+    <a href="https://www.php.net/manual/ru/function.htmlspecialchars" target="_blank">htmlspecialchars() - Преобразует
+      специальные символы в HTML-сущности</a>
+    <a href="https://www.php.net/manual/ru/function.strip-tags" target="_blank">strip_tags() - Удаляет теги HTML и PHP
+      из строки</a>
+    <a href="https://www.php.net/manual/ru/function.nl2br" target="_blank">nl2br() - Вставляет HTML-код разрыва строки
+      перед каждым переводом строки</a>
+    <a href="lessons/lesson44/index.php" class="code">Код</a>
+
+    <h3 id="lesson45">45. Форматный вывод</h3>
+    <a href="https://www.php.net/manual/ru/function.printf.php" target="_blank">printf() Выводит отформатированную
+      строку</a>
+    <a href="https://www.php.net/manual/ru/function.explode" target="_blank">explode() - Разбивает строку с помощью
+      разделителя</a>
+    <a href="https://www.php.net/manual/ru/function.implode" target="_blank">implode() - Объединяет элементы массива в
+      строку</a>
+    <a href="lessons/lesson45/index.php" class="code">Код</a>
+
+    <h3 id="lesson46">46. Работа с JSON</h3>
+    <a href="https://www.php.net/manual/ru/function.json-encode" target="_blank">json_encode() - Возвращает
+      JSON-представление данных</a>
+    <a href="https://www.php.net/manual/ru/function.json-decode" target="_blank">json_decode() - Декодирует строку
+      JSON</a>
+    <a href="lessons/lesson46/index.php" class="code">Код</a>
+
+    <h3 id="lesson47">47. Передача параметров методом GET</h3>
+    <a href="https://www.php.net/manual/ru/function.urlencode" target="_blank">urlencode() - URL-кодирование строки</a>
+    <a href="https://www.php.net/manual/ru/function.urldecode" target="_blank">urldecode() - Декодирование
+      URL-кодированной строки</a>
+    <a href="https://www.php.net/manual/ru/function.parse-url" target="_blank">parse_url() - Разбирает URL и возвращает
+      его компоненты</a>
+    <a href="lessons/lesson47/index.php" class="code">Код</a>
+
+    <h3 id="lesson48">48. Передача параметров методом POST</h3>
+    <a href="lessons/lesson48/index.php" class="code">Код</a>
+
+    <h3 id="lesson49">49. Работа с элементами формы checkbox, radio, select</h3>
+    <a href="lessons/lesson49/index.php" class="code">Код</a>
+
+    <h3 id="lesson50">50. Загрузка файлов на сервер</h3>
+    <a href="https://www.php.net/manual/ru/function.move-uploaded-file" target="_blank">move_uploaded_file() -
+      Перемещает загруженный файл в новое место</a>
+    <a href="lessons/lesson50/index.php" class="code">Код</a>
+
+
+    <h3 id="lesson51">51. Форма обратной связи, отправка письма на почту</h3>
+    <a href="https://www.php.net/manual/ru/function.header" target="_blank">header — Отправка HTTP-заголовка</a>
+    <a href="https://www.php.net/manual/ru/function.phpversion" target="_blank">phpversion — Получает текущую версию
+      PHP</a>
+    <a href="https://www.php.net/manual/ru/function.mail" target="_blank">mail — Отправляет электронную почту</a>
+    <a href="lessons/lesson51/index.php" class="code">Код</a>
+
+    <h3 id="lesson52">52. Методы класса</h3>
+    <a href="lessons/lesson52/index.php" class="code">Код</a>
+
+    <h3 id="lesson53">53. Конструктор класса</h3>
+    <a href="lessons/lesson53/index.php" class="code">Код</a>
+
+    <h3 id="lesson54">54. Наследование и перегрузка методов</h3>
+    <a href="lessons/lesson54/index.php" class="code">Код</a>
+
+    <h3 id="lesson55">55. abstract и final классы и методы</h3>
+    <a href="lessons/lesson55/index.php" class="code">Код</a>
+
+    <h3 id="materials">Полезные материалы</h3>
+    <ol>
+      <li><a href="https://www.php.net/manual/ru/" target="_blank">Оффициальная документация на русском языке</a></li>
+      <li><a href="https://youtu.be/uY0I4c3nwfA" target="_blank">Блок-схемы алгоритмов</a></li>
+      <li><a href="https://youtu.be/TZhqrs-Xpx4" target="_blank">Быстрая сортировка массива на языке PHP</a></li>
+    </ol>
+
+  </div>
+
+</body>
+
+</html>

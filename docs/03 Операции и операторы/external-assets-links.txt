@@ -1,0 +1,9 @@
+
+016 echo
+https://www.php.net/manual/ru/function.echo
+
+019 -
+https://www.php.net/manual/ru/language.operators.precedence.php
+
+024 -
+https://www.php.net/manual/ru/function.file-get-contents.php
